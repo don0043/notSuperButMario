@@ -14,7 +14,7 @@ public enum TileType {
         return n;
     }
 
-    public static TileType fromNumric(int n){
+    public static TileType fromNumeric(int n){
         switch (n){
             case 1:
                 return BRICK;
