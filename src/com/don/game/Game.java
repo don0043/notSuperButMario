@@ -22,6 +22,8 @@ public class Game implements Runnable {
 
     public static final String	ATLAS_FILE_NAME	= "texture_atlas.png";
 
+    public static Music menu;
+
     private boolean				running;
     private Thread				gameThread;
     private Graphics2D			graphics;
@@ -82,6 +84,10 @@ public class Game implements Runnable {
     }
 
     public void run() {
+
+        menu = new Music("C:\\Users\\Notnik_kg\\Downloads\\git2\\notSuperButMario\\music\\obrazcovyy-voennyy-orkestr-pochetnogo-karaula-moskovskogo-garnizona-marsh-proschanie-slavyanki.wav",  0.68);
+        menu.sound();
+        menu.setVolume();
 
         int fps = 0;
         int upd = 0;
