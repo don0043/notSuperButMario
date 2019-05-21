@@ -39,7 +39,7 @@ public class Game implements Runnable {
         input = new Input();
         Display.addInputListener(input);
         atlas = new TextureAtlas(ATLAS_FILE_NAME);
-        player = new Player(300, 300, 2, 3, atlas);
+        player = new Player(800, 800, 2, 3, atlas);
         lvl = new Level(atlas);
     }
 
@@ -85,7 +85,7 @@ public class Game implements Runnable {
 
     public void run() {
 
-        menu = new Music("C:\\Users\\Notnik_kg\\Downloads\\git2\\notSuperButMario\\music\\obrazcovyy-voennyy-orkestr-pochetnogo-karaula-moskovskogo-garnizona-marsh-proschanie-slavyanki.wav",  0.68);
+        menu = new Music("C:\\Users\\Notnik_kg\\Downloads\\git2\\notSuperButMario\\music\\obrazcovyy-voennyy-orkestr-pochetnogo-karaula-moskovskogo-garnizona-marsh-proschanie-slavyanki.wav",  0.35);
         menu.sound();
         menu.setVolume();
 
