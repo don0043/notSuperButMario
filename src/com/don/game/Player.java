@@ -13,6 +13,7 @@ import com.don.graphics.TextureAtlas;
 
 public class Player extends Entity {
 
+
     public static final int	SPRITE_SCALE		= 16;
     public static final int	SPRITES_PER_HEADING	= 1;
 
@@ -75,6 +76,9 @@ public class Player extends Entity {
         } else if (input.getKey(KeyEvent.VK_LEFT)) {
             newX -= speed;
             heading = Heading.WEST;
+        } else if (input.getKey(KeyEvent.VK_SPACE)){
+            this.fireBullet();
+
         }
 
         if (newX < 0) {
@@ -97,6 +101,9 @@ public class Player extends Entity {
     @Override
     public void render(Graphics2D g) {
         spriteMap.get(heading).render(g, x, y);
+    }
+    private void fireBullet(){
+
     }
 
 }

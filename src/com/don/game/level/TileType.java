@@ -20,11 +20,11 @@ public enum TileType {
                 return BRICK;
             case 2:
                 return METAL;
-            case 3:
+            case 5:
                 return WATER;
             case 4:
                 return GRASS;
-            case 5:
+            case 3:
                 return ICE;
             default:
                 return EMPTY;

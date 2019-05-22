@@ -33,6 +33,9 @@ public class Game implements Runnable {
     private Level lvl;
 
     public Game() {
+
+
+
         running = false;
         Display.create(WIDTH, HEIGHT, TITLE, CLEAR_COLOR, NUM_BUFFERS);
         graphics = Display.getGraphics();
@@ -80,12 +83,13 @@ public class Game implements Runnable {
         Display.clear();
         lvl.render(graphics);
         player.render(graphics);
+        lvl.renderGrass(graphics);
         Display.swapBuffers();
     }
 
     public void run() {
 
-        menu = new Music("C:\\Users\\Notnik_kg\\Downloads\\git2\\notSuperButMario\\music\\obrazcovyy-voennyy-orkestr-pochetnogo-karaula-moskovskogo-garnizona-marsh-proschanie-slavyanki.wav",  0.35);
+        menu = new Music("C:\\Users\\Notnik_kg\\Downloads\\git2\\notSuperButMario\\music\\obrazcovyy-voennyy-orkestr-pochetnogo-karaula-moskovskogo-garnizona-marsh-proschanie-slavyanki.wav",  0.70);
         menu.sound();
         menu.setVolume();
 
